@@ -1,0 +1,17 @@
+# Python/Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+/staticfiles/
+/media/
+
+# Node.js/Next.js
+node_modules/
+.next/
+.env.local
+
+# System files
+.DS_Store
+Thumbs.db
