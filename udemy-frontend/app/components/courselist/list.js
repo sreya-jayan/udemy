@@ -80,7 +80,7 @@ function List() {
              ))}
             </div>
 
-            {/* Section 2 - Trending Now */}
+           
     <div className='pt-20'>
       <p className='text-left text-2xl font-semibold pt-6'>Personalized course recommendations</p>
     </div>

@@ -102,7 +102,7 @@ const Student = () => {
             </div>
             
             <div className='w-10 h-10 border border-violet-400 flex items-center justify-center rounded-full mb-5'>
-            <img className='w-5 h-5' src="/images/wishlisted.png" alt="" />
+            <img className='w-5 h-5' src="/images/wishlisted.png" alt="wishlist" />
            </div>
           </div>
         ))}

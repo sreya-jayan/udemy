@@ -6,13 +6,13 @@ function start() {
     <Wrapper>
     <div className="bg-white py-10 px-4">
     <div className="">
-      {/* Header and My Learning Link */}
+     
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-semibold">Let's start learning</h1>
         <a href="#" className="text-purple-700 font-semibold underline text-sm">My learning</a>
       </div>
 
-      {/* Course Collection Box */}
+     
       <div className="border border-gray-300 p-6 mb-6">
         <h2 className="text-lg font-bold mb-1">Explore our course collection</h2>
         <p className="text-gray-600 mb-4">
@@ -23,7 +23,7 @@ function start() {
         </button>
       </div>
 
-      {/* Business Banner */}
+     
       <div className=" mt-12 bg-black text-white px-6 py-4 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm font-semibold">
           <span className="font-bold">Training 2 or more people?</span> Get your team access to Udemy's top 27,000+ courses

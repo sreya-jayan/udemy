@@ -100,7 +100,7 @@ const More = () => {
                   <p className="text-sm text-gray-500 mb-1">{section.instructor}</p>
                   <div className="flex items-center mb-2">
                     <span className="text-amber-600 mr-2">⭐⭐⭐⭐⭐ {course.rating}</span>
-                    <span className="text-gray-500 text-sm">({course.reviews.toLocaleString()})</span>
+                    
                   </div>
                   <p className="text-sm text-gray-600 mb-2">{course.hours} hrs • {course.lectures} lectures • {course.level}</p>
                   <div className="flex gap-3 items-center w-full">

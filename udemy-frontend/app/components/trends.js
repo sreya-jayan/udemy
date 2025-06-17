@@ -30,14 +30,8 @@ const Trends = () => {
             <div className="relative w-full ">
             <img className='object-cover rounded-lg' src="/images/Onsite_Desktop.webp" alt="" />
              
-            </div>
+          </div>
            
-            <div className="absolute -bottom-4 -right-4 w-full h-full -z-10">
-              <div className="bg-purple-100 w-full h-full rounded-lg transform rotate-2"></div>
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-full h-full -z-20">
-              <div className="bg-purple-50 w-full h-full rounded-lg transform rotate-4"></div>
-            </div>
           </div>
         </div>
       </div>
