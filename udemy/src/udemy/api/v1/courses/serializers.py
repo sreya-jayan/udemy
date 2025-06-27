@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from courses.models import Course,Purchase,Category,Purchase,User
+from courses.models import Course,Purchase,Category,Purchase,User,CourseContent
 from rest_framework import serializers
 
 
@@ -16,10 +16,26 @@ class CourseSerializer(ModelSerializer):
         model = Course
 
 
+
+
+
+
+
+
+class CourseContentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CourseContent
+        fields = ['day', 'level', 'title', 'lectures', 'duration']
+
+
+
+
+
 class CourseDetailSerializer(ModelSerializer):
     category = serializers.SerializerMethodField()
+    contents = CourseContentSerializer(many=True, read_only=True)
     class Meta:
-        fields = ("id","title","featured_image","description","rating","price","category","author_name")
+        fields = ("id","title","featured_image","description","rating","price","category","author_name","contents")
         model = Course
 
     def get_category(self, instance):
@@ -27,10 +43,14 @@ class CourseDetailSerializer(ModelSerializer):
  
 
 
+
+
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
         fields = ("id", "title", "image")
+
+
 
 
 

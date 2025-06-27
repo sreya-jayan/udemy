@@ -3,6 +3,7 @@
 
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import Link from 'next/link';
 
 function Page() {
     const [courses, setCourses] = useState([]);
@@ -39,11 +40,14 @@ function Page() {
         
         <div className="flex flex-wrap gap-15 pt-15 ml-0 ">
      {courses.map((purchase) => (
-                <div key={purchase.id}
+       <Link href={`/courselist/${purchase.course.id}`} key={purchase.id}>
+              
                 
-                 className="w-full sm:w-[200px] lg:w-[250px] bg-white overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="w-full sm:w-[200px] lg:w-[250px] bg-white overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <div className=" relative">
+                 
                     <img className='w-full cursor-pointer' src={`http://localhost:8000${purchase.course.featured_image}`} alt="image"  />
+                 
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold text-base mb-2 line-clamp-2 cursor-pointer">{purchase.course.title}</h3>
@@ -63,6 +67,7 @@ function Page() {
                     </div>
                   </div>
                 </div>
+                </Link>
              ))}
             </div>
           

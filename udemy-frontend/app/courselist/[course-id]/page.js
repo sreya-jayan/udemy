@@ -102,7 +102,7 @@ function Page() {
     <Bynow course={course} />
     <Related />
     <Topic />
-    <CourseContent />
+    <CourseContent course={course} />
     <Content />
     <Featured />
     <Student />

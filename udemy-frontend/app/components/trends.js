@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 const Trends = () => {
   return (
@@ -28,7 +28,7 @@ const Trends = () => {
          
           <div className="lg:w-2/3 relative">
             <div className="relative w-full ">
-            <img className='object-cover rounded-lg' src="/images/Onsite_Desktop.webp" alt="" />
+            <img className='object-cover rounded-lg' src="/images/Onsite_Desktop.webp" alt="Onsite_Desktop" />
              
           </div>
            

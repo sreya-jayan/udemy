@@ -57,4 +57,16 @@ class Purchase(models.Model):
 
 
 
+class CourseContent(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="contents")
+    day = models.CharField(max_length=50)
+    level = models.CharField(max_length=50, default="Beginner")
+    title = models.CharField(max_length=175)
+    lectures = models.IntegerField()
+    duration = models.CharField(max_length=50)
 
+    class Meta:
+        db_table = "courses_content"
+
+    def __str__(self):
+        return self.title

@@ -1,8 +1,10 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 
 function Bynow({ course }) {
+  const [message, setMessage] = useState("");
+
   const handleEnroll = async () => {
     const token = localStorage.getItem("access");
 
@@ -22,11 +24,11 @@ function Bynow({ course }) {
         window.location.href = '/my-learnings';
       } else {
         console.error('Enrollment failed:', data.message);
-        alert('Enrollment failed: ' + data.message);
+        setMessage(data.message);
       }
     } catch (error) {
       console.error('Error during enrollment:', error);
-      alert('Something went wrong. Please try again.');
+      setMessage('Something went wrong. Please try again.');
     }
   };
 
@@ -53,6 +55,12 @@ function Bynow({ course }) {
           <span className=" pl-2 text-green-600">89% off</span>
         </div>
         <button onClick={handleEnroll} className="w-full border border-purple-600 text-purple-600 py-2 rounded-md mb-4 font-semibold hover:bg-purple-600 hover:text-white ">Enroll</button>
+
+        {message && (
+        <div className="mt-2 p-2 bg-purple-200 text-red-800 text-sm rounded text-center">
+          {message}
+        </div>
+      )}
 
 </div>
     
